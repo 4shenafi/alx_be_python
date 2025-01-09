@@ -14,7 +14,7 @@ def main():
         if choice == '1':
             # Prompt for and add an item
             add_item = input("Enter shopping item: ")
-            shopping_list.add(add_item)
+            shopping_list.append(add_item)
         elif choice == '2':
             # Prompt for and remove an item
             remove_item = input("Enter removing Item: ")
@@ -24,7 +24,8 @@ def main():
                 print("Item Not Found!")
         elif choice == '3':
             # Display the shopping list
-            print(shopping_list)
+            for item in shopping_list:
+                print(item)
         elif choice == '4':
             print("Goodbye!")
             break
